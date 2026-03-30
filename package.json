@@ -1,0 +1,39 @@
+{
+  "name": "automatic-sftp-backup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["backup", "sftp", "bsm", "security", "encryption"],
+  "author": "Basil Saji Mathew (BSM)",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "axios": "^1.14.0",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "dotenv": "^17.3.1",
+    "node-cron": "^4.2.1",
+    "ssh2-sftp-client": "^12.1.1",
+    "winston": "^3.19.0",
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/archiver": "^7.0.0",
+    "@types/node": "^25.5.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/ssh2-sftp-client": "^9.0.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}

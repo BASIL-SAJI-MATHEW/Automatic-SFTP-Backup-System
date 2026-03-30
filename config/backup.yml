@@ -1,0 +1,65 @@
+# BSM Automatic SFTP Backup System - Configuration File
+# Developed by Basil Saji Mathew (BSM)
+
+global:
+  environment: "production"
+  log_level: "info"
+  temp_dir: "./backups/tmp"
+  backup_dir: "./backups/archives"
+
+servers:
+  - id: "vps-01-web"
+    name: "Web Server 01"
+    host: "192.168.1.100"
+    port: 22
+    username: "backup_user"
+    password: "securepassword"
+    # private_key: "./config/keys/vps_01_rsa" (optional, over rides password)
+    enabled: true
+    source_paths:
+      - "/var/www/html"
+      - "/etc/nginx"
+    exclude_paths:
+      - "/var/www/html/node_modules"
+      - "*.tmp"
+  
+  - id: "vps-02-db"
+    name: "Database Server 01"
+    host: "192.168.1.101"
+    port: 22
+    username: "backup_user"
+    password: "securepassword"
+    enabled: true
+    source_paths:
+      - "/var/backups/db"
+
+databases:
+  enabled: true
+  mysql:
+    - host: "localhost"
+      port: 3306
+      databases: ["wordpress_db", "app_schema"]
+  postgres:
+    - host: "localhost"
+      port: 5432
+      databases: ["postgres"]
+  mongodb:
+    - uri: "mongodb://localhost:27017"
+      databases: ["admin"]
+
+backup:
+  mode: "full" # Options: full, incremental
+  compression:
+    enabled: true
+    format: "tar.gz" # Options: zip, tar, tar.gz
+  encrypt: true
+  scheduling:
+    enabled: true
+    cron: "0 2 * * *" # Run at 2:00 AM every day
+  retention:
+    max_age_days: 15
+    max_count: 30
+
+notifications:
+  discord: true
+  email: false

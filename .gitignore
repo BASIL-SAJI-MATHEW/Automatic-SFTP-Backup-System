@@ -1,0 +1,35 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build output
+dist/
+build/
+*.js
+*.js.map
+
+# Keep TS files
+!src/**/*.ts
+
+# Environment variables
+.env
+.env.production
+.env.local
+
+# Backups and Logs
+backups/*
+!backups/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
