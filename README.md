@@ -3,7 +3,7 @@
   <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg?style=for-the-badge" alt="Version" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License" />
   <h1>🛡️ BSM Automatic SFTP Backup System</h1>
-  <p>The MOST ADVANCED, modular, scalable, and secure SFTP backup engine ever created.</p>
+  <p>A modular, configurable SFTP backup engine for multi-server VPS environments.</p>
   <p><strong>Developed & Watermarked by Basil Saji Mathew (BSM)</strong></p>
 </div>
 
@@ -11,17 +11,17 @@
 
 ## 🚀 Overview
 
-The **BSM Automatic SFTP Backup System** is a next-generation, high-performance, and fully configurable automated backup suite designed for multi-server enterprise environments. Engineered with zero compromises on security and efficiency, it powers dynamic file retention, deep compression, military-grade encryption, and real-time Discord notifications. 
+The **BSM Automatic SFTP Backup System** is a configurable automated backup suite designed for multi-server enterprise environments. Engineered with zero compromises on security and efficiency, it powers dynamic file retention, deep compression, military-grade encryption, and real-time Discord notifications. 
 
 ## ✨ Features
 
 - 🌐 **Multi-Server Multi-Destination**: Unlimited remote nodes. Pull/Push data across VPS clusters.
 - 🗄️ **Smart Database Archiver**: Auto-detects and dumps MySQL, PostgreSQL, and MongoDB bases.
 - 📦 **Dynamic Compression**: Zlib integration supporting `.zip`, `.tar`, and `.tar.gz`.
-- 🔐 **AES-256 Encryption**: Rest easy knowing your archives are mathematically uncrackable natively.
+- 🔐 **AES-256 Encryption**: Rest easy knowing your archives are encrypted at rest with AES-256.
 - 🧹 **Auto-Cleanup / Retention Engine**: Self-managing file retention policies (Date, Count, or Size-based).
 - 🕒 **Granular Schedulers**: Supports internal CRON patterns and real-time syncing.
-- 🤖 **Discord Webhook AI Integration**: Detailed alerts natively to your admin Discord channels (Success, Failure, Warnings).
+- 🤖 **Discord Webhook Alerts**: Detailed alerts natively to your admin Discord channels (Success, Failure, Warnings).
 
 ## 📊 Quick Screenshots
 *(Placeholders for future UI / Console logs)*
